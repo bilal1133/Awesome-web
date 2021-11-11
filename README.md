@@ -21,6 +21,9 @@
       const speechRecognition =
       window.speechRecognition || window.webkitSpeechRecognition;
     const recognition = new speechRecognition();
+    SpeechRecognition.continuous = true;
+    recognition.interimResults = true;
+    recognition.lang = "en";
     recognition.onstart = function () {
       console.log("you can speek now");
     };
