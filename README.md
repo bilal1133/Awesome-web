@@ -36,3 +36,13 @@
     };
 
       ```
+   * ### Detect if a browser window is not currently active
+      ```
+      document.addEventListener( 'visibilitychange' , function() {
+           if (document.hidden) {
+               document.title = 'bye'
+           } else {
+               document.title = 'well back'
+           }
+       }, false );
+      ```
